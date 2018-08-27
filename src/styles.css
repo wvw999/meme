@@ -16,7 +16,7 @@ body {
 }
 
 .top {
-  position: absolute; //this plays wonky when I resize
+  position: absolute; /*this plays wonky when I resize*/
   top: 90px;
   left: 45px;
 }
