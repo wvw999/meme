@@ -9,7 +9,6 @@ export class QuoteService {
 
   getQuote(): string {
 
-
     let quotePromise = QuoteGenerator.fetchQuote();
     quotePromise.then(quoteData => {
       this.quote = quoteData.quote;
