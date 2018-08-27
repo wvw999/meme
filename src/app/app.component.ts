@@ -18,7 +18,7 @@ export class AppComponent {
   constructor(private quoteService: QuoteService) {}
 
   getMeme() {
-    this.quote = this.quoteService.getQuote();
+    this.quote = this.quoteService.getFunnyQuote();
   }
 
 }
