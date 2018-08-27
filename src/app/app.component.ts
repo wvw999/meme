@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  randomNumber = Math.floor(Math.random() * 900)+1;
 }
