@@ -9,7 +9,7 @@ body {
 
 .memeText {
     color: #FFF;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1.25px;
     -webkit-text-stroke-color: #000;
     font-family: 'Roboto Condensed', sans-serif;
     font-variant-caps: all-small-caps; /* is this necessary? */
