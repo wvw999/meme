@@ -14,3 +14,15 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     font-variant-caps: all-small-caps; /* is this necessary? */
 }
+
+.top {
+  position: absolute; //this plays wonky when I resize
+  top: 90px;
+  left: 45px;
+}
+
+.bottom {
+    position: absolute;
+    top: 3000px;
+    left: 45px;
+}
