@@ -13,6 +13,9 @@ body {
     -webkit-text-stroke-color: #000;
     font-family: 'Roboto Condensed', sans-serif;
     font-variant-caps: all-small-caps; /* is this necessary? */
+    font-size-adjust: auto;
+    font-size: 50px;
+
 }
 
 .top {
@@ -23,6 +26,6 @@ body {
 
 .bottom {
     position: absolute;
-    top: 3000px;
+    top: 300px;
     left: 45px;
 }
