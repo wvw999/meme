@@ -20,7 +20,7 @@ body {
 
 .top {
   position: absolute; /*this plays wonky when I resize*/
-  line-height: 1.1em;
+  line-height: 28px;
   top: 90px;
   left: 45px;
 }
