@@ -1,9 +1,8 @@
 import { QuoteGenerator } from './quote-generator.model';
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
-export class QuoteService implements OnInit {
-  quotePackage: any;
+export class QuoteService {
 
   constructor() { }
 
@@ -11,22 +10,19 @@ export class QuoteService implements OnInit {
 
     let quotePromise = QuoteGenerator.fetchQuote();
     quotePromise.then(quoteData => {
-      this.quotePackage = quoteData;
+      let quotePackage = quoteData;
+      let funnyQuote = this.getFunnyQuote(quotePackage)
     }).catch(error => {
       console.log(error);
     })
   }
 
-  getFunnyQuote(): string {
-    let quoteObj = this.quotePackage.find(p => p.cat === "funny");
+  getFunnyQuote(quotePackage): string {
+    let quoteObj = quotePackage.find(p => p.cat === "funny");
 
     return quoteObj.quote;
   }
 
-  ngOnInit() {
-    console.log("init");
-    this.getQuote();
-  }
 
 
 
