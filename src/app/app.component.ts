@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { QuoteService } from './quote.service';
 
 @Component({
@@ -18,7 +18,12 @@ export class AppComponent {
   constructor(private quoteService: QuoteService) {}
 
   getMeme() {
-    this.quote = this.quoteService.getFunnyQuote();
+    let quotePromise = this.quoteService.getQuote();
+    quotePromise.then(quoteData => {
+      this.quote = this.quoteService.getFunnyQuote(quoteData);
+    }).catch(error => {
+      console.log(error);
+    })
   }
 
 }
