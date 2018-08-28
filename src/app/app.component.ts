@@ -1,5 +1,9 @@
 import { Component, ElementRef } from '@angular/core';
 import { QuoteService } from './quote.service';
+import { GreekComponent } from './greek/greek.component';
+import { JapaneseComponent } from './japanese/japanese.component';
+import { RussianComponent } from './russian/russian.component';
+import { TeluguComponent } from './telugu/telugu.component';
 
 @Component({
   selector: 'app-root',
