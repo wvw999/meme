@@ -1,41 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2">
-        &nbsp;
-      </div>
-      <div class="col-md-8">
+<div class="container">
+  <div class="jumbotron bg-dark">
+    <h1>
+      Welcome to {{ title | uppercase }}!
+    </h1>
+  </div>
 
-        <div class="row">
-          <h1>
-            Welcome to {{ title | uppercase }}!
-          </h1>
-          <button class="btn btn-success" (click)="getMeme()">Generate Meme!</button>
-        </div>
-        <div class="row" *ngIf="quote !== ''">
-          <h1 class="memeText top">{{quote}}</h1>
-
-          <div class="row">
-            <div width="400px">
-              <img width="400px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
-            </div>
-          </div>
-
-          <div class="row">
-            <h1 class="memeText bottom">"{{randomSelection}}"</h1>
-          </div>
-        </div>
-      </div>
+  <div *ngIf="quote !== ''">
+    <div class="card bg-dark text-white">
+      <img class="card-img" width="400px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
+    <div class="card-img-overlay">
+      <h1 class="card-title memeText top">{{quote}}</h1>
+      <p class="card-text memeText bottom">—{{randomSelection}}</p>
+    </div>
     </div>
   </div>
-  <div class="col-md-2">
-    &nbsp;
+
+  <div style="text-align:center">
+    <button class="btn btn-success" (click)="getMeme()">Generate Meme!</button>
   </div>
+
 </div>
-
-
-<!--  <h1 #memeText class="memeText top">{{quote}}</h1>
-  <div width="400px">
-    <img width="400px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
-  </div> -->
