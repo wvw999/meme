@@ -8,6 +8,7 @@ import { RussianComponent } from './russian/russian.component';
 import { JapaneseComponent } from './japanese/japanese.component';
 import { GreekComponent } from './greek/greek.component';
 import { TeluguComponent } from './telugu/telugu.component';
+import { RandomComponent } from './random/random.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TeluguComponent } from './telugu/telugu.component';
     RussianComponent,
     JapaneseComponent,
     GreekComponent,
-    TeluguComponent
+    TeluguComponent,
+    RandomComponent
   ],
   imports: [
     BrowserModule
