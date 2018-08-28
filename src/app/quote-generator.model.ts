@@ -7,9 +7,10 @@ export class QuoteGenerator {
 
       request.onload = function() {
         if(request.status === 200) {
-          let quote = JSON.parse(request.response);
+          let quotePackage = JSON.parse(request.response);
+          let quoteObj = quotePackage.find(p => p.cat === "funny");
 
-          resolve(quote);
+          resolve(quoteObj);
         }
         else {
           reject(request.statusText);
