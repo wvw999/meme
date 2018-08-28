@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
+## items left to complete Tuesday 8/28
+
+Have image load when page loads
+Have quote, person refresh when button is clicked
+link up language selector to other languages
+build 'randomizer'?
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
