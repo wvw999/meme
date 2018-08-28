@@ -8,7 +8,9 @@ import { QuoteService } from './quote.service';
   providers: [QuoteService]
 })
 export class AppComponent {
-  title = 'crap';
+  funnyTitles = ["poop", "crap", "a waste of time", "junk", "garbage", "offal", "detritus", "nonsense", "dirty socks", "a handful of cheerios", "stuff your mom told you not to do"]
+  titleNumber = Math.floor(Math.random() * 11);
+  title = this.funnyTitles[this.titleNumber];
   quote: string;
   randomNumber = Math.floor(Math.random() * 12000)+1;
   randomPersonNumber = Math.floor(Math.random() * 480);
@@ -22,7 +24,7 @@ export class AppComponent {
        this.shortQuotes.push(index);
      }
    });
-   randomShortNumber = Math.floor(Math.random() * this.shortQuotes.length-1);
+   randomShortNumber = Math.floor(Math.random() * this.shortQuotes.length);
    testQuote = this.shortQuotes[this.randomShortNumber];
    // end of test of truncater: does not work yet. so excite. very wow
   constructor(private quoteService: QuoteService) {}
