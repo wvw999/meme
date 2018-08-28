@@ -6,32 +6,36 @@
         &nbsp;
       </div>
       <div class="col-md-8">
+
         <div class="row">
           <h1>
             Welcome to {{ title | uppercase }}!
           </h1>
           <button class="btn btn-success" (click)="getMeme()">Generate Meme!</button>
-
-        <h1 class="memeText top">{{quote}}</h1>
         </div>
-        <div class="row">
-          <div width="400px">
-            <img width="400px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
+        <div class="row" *ngIf="quote !== ''">
+          <h1 class="memeText top">{{quote}}</h1>
+
+          <div class="row">
+            <div width="400px">
+              <img width="400px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
+            </div>
+          </div>
+
+          <div class="row">
+            <h1 class="memeText bottom">"{{randomSelection}}"</h1>
           </div>
         </div>
-        <div class="row">
-          <h1 class="memeText bottom">"{{randomSelection}}"</h1>
-        </div>
-      </div>
-      <div class="col-md-2">
-        &nbsp;
       </div>
     </div>
+  </div>
+  <div class="col-md-2">
+    &nbsp;
+  </div>
+</div>
 
 
 <!--  <h1 #memeText class="memeText top">{{quote}}</h1>
   <div width="400px">
     <img width="400px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
   </div> -->
-
-</div>
