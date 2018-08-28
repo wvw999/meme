@@ -12,7 +12,6 @@ import { TeluguComponent } from './telugu/telugu.component';
   providers: [QuoteService]
 })
 export class AppComponent {
-  title = 'crap';
   quote: string = '';
   randomNumber: number;
   randomPersonNumber : number;
@@ -35,7 +34,7 @@ export class AppComponent {
     this.randomNumber = Math.floor(Math.random() * 12000)+1;
     this.randomPersonNumber = Math.floor(Math.random() * 480);
     this.randomSelection = this.famousPerson[this.randomPersonNumber];
-    titleNumber = Math.floor(Math.random() * 11);
+    this.titleNumber = Math.floor(Math.random() * 11);
     this.title = this.funnyTitles[this.titleNumber];
   }
 
