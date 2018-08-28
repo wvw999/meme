@@ -1,4 +1,5 @@
 
+@import '~bootstrap/dist/css/bootstrap.min.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
 
 body {
@@ -20,13 +21,13 @@ body {
 
 .top {
   position: absolute; /*this plays wonky when I resize*/
-  line-height: 1.1em;
+  line-height: 28px;
   top: 90px;
   left: 45px;
 }
 
 .bottom {
     position: absolute;
-    top: 300px;
+    top: 400px;
     left: 45px;
 }
