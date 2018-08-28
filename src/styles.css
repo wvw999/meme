@@ -6,6 +6,7 @@ body {
     background-color: #EEE;
     /* font-family: 'Roboto Condensed', sans-serif; */
     font-family: verdana, sans-serif;
+    background-image: url(./assets/img/bg.png);
 }
 
 .memeText {
@@ -43,6 +44,10 @@ body {
 
 .jumbotron {
   color: white;
+}
+
+.white {
+  background-color: #FFF;
 }
 
 /* .generate {
