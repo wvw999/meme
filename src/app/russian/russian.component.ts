@@ -11,7 +11,6 @@ export class RussianComponent implements OnInit {
   constructor() { }
 
   getRussianQuote(){
-    console.log(this.russianQuote[this.randomRussian]);
     return this.russianQuote[this.randomRussian];
   }
 

@@ -9,13 +9,20 @@ import { QuoteService } from '../quote.service';
 })
 export class EnglishComponent implements OnInit {
   quote: string = '';
+  // because of the random nature of our quote generator, we need to filter out quotes which may result in offensive or tasteless references. Thus. The below.
+  verboten = ["jew", "arab", "muslim", "negro", "gay", "homosexual", "feminist", "lesbian"]
+  //end of commentary
 
   constructor(private quoteService: QuoteService) {}
 
   buildEnglishQuotes(quotePackage): void {
     for(let i = 0; i < quotePackage.length; i++) {
       if(quotePackage[i].quote.length <= 100) {
-        QuoteService.quoteLibrary.push(quotePackage[i].quote);
+        if(this.verboten.includes(quotePackage[i].quote.toLowerCase())) {
+          let a = 0;
+        } else {
+          QuoteService.quoteLibrary.push(quotePackage[i].quote);
+        }
       }
     }
   }
