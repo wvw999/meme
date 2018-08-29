@@ -35,9 +35,9 @@ export class QuoteService {
     return new TeluguComponent().getTeluguQuote();
   }
 
-  // getRandomizedQuote() {
-  //   return new RandomComponent().getRandomQuote();
-  // }
+  getRandomQuote(english) {
+    return new RandomComponent().getRandomQuote(english);
+  }
 
 
 

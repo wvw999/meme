@@ -20,19 +20,21 @@
     </div>
     </div>
   </div>
+
   <div class="row">
     <div class="col-sm-2">
     </div>
     <div style="text-align:center" class="col-sm-8 white" width="470">
-      <select #language>
-        <option value="english" checked> English</option>
-        <option value="random" checked> Randomized English</option>
-        <option value="japanese"> Japanese</option>
-        <option value="russian"> Russian</option>
-        <option value="greek"> Greek</option>
-        <option value="telugu"> Telugu</option>
-      </select>
-      <button class="btn btn-success" (click)="getMeme(language.value)">Generate Meme!</button>
+    <select #language>
+      <option value="english" checked> English</option>
+      <option value="random" checked> Randomized English</option>
+      <option value="japanese"> Japanese</option>
+      <option value="russian"> Russian</option>
+      <option value="greek"> Greek</option>
+      <option value="telugu"> Telugu</option>
+      <option value="special"> SpEcIaL!</option>
+    </select>
+    <button class="btn btn-success" (click)="getMeme(language.value)">Generate Meme!</button>
     </div>
     <div class="col-sm-2">
     </div>
