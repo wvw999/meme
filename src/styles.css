@@ -21,22 +21,22 @@ body {
 }
 
 .top {
-  /* position: absolute; /*this plays wonky when I resize*/
+  position: absolute; /*this plays wonky when I resize*/
   line-height: 28px;
-  top: 90px;
-  left: 45px;
+  top: 4px;
+  left: 4px;
 }
 
 .bottom {
     position: absolute;
     line-height: 28px;
-    top: 340px;
-    left: 30px;
+    top: 350px;
+    left: 4px;
 }
 
 .card {
   width: 400px;
-  padding: 8px;
+  padding: 35px;
   margin: 0 auto; /* Added */
   float: none; /* Added */
   margin-bottom: 10px; /* Added */
