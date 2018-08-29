@@ -7,14 +7,13 @@
 
   <div *ngIf="quote ===''">
     <div align="center" class="card bg-dark">
-      <img src="../assets/img/dr-evil.jpg" alt="Welcome to the Meme Generator!" align="center">
+      <img src="../assets/img/dr-evil.jpg" alt="Welcome to the Meme Generator!" align="center" width="400">
     </div>
   </div>
 
   <div *ngIf="quote !== ''">
     <div id="memeImage" class="card bg-dark text-white">
-
-      <img class="card-img" width="400px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
+      <img class="card-img" width="500px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
     <div class="card-img-overlay">
       <h1 class="card-title memeText top">{{quote}}</h1>
       <p class="card-text memeText bottom">—{{randomSelection}}</p>
@@ -22,7 +21,10 @@
     </div>
   </div>
 
-  <div style="text-align:center" class="white">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div style="text-align:center" class="col-sm-8 white" width="470">
     <select #language>
       <option value="english" checked> English</option>
       <option value="random" checked> Randomized English</option>
@@ -33,6 +35,8 @@
       <option value="special"> SpEcIaL!</option>
     </select>
     <button class="btn btn-success" (click)="getMeme(language.value)">Generate Meme!</button>
+    </div>
+    <div class="col-sm-2">
+    </div>
   </div>
-
 </div>
