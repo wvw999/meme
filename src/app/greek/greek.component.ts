@@ -11,7 +11,6 @@ export class GreekComponent implements OnInit {
   constructor() { }
 
   getGreekQuote(){
-    console.log(this.greekQuote[this.randomGreek]);
     return this.greekQuote[this.randomGreek];
   }
 

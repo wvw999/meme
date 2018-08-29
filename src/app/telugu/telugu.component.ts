@@ -11,7 +11,6 @@ import { Component, OnInit } from '@angular/core';
   constructor() { }
 
   getTeluguQuote(){
-    console.log(this.teluguQuote[this.randomTelugu]);
     return this.teluguQuote[this.randomTelugu];
   }
 

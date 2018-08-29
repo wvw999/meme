@@ -11,7 +11,6 @@ export class JapaneseComponent implements OnInit {
   constructor() { }
 
   getJapaneseQuote(){
-    console.log(this.japaneseQuote[this.randomJapanese]);
     return this.japaneseQuote[this.randomJapanese];
   }
 

@@ -18,17 +18,18 @@ export class AppComponent implements OnInit {
   quote: string = '';
   randomNumber: number;
   randomSelection: string;
+  famousRename = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   funnyTitles = ["poop", "crap", "a waste of time", "junk", "garbage", "offal", "detritus", "nonsense", "dirty socks", "a handful of cheerios", "stuff your mom told you not to do", "moist underwear"]
   titleNumber: number;
-  title: string;
+  title: string = 'gibberish';
   english: EnglishComponent = new EnglishComponent(this.quoteService);
 
   constructor(private quoteService: QuoteService, ) {}
 
   getMeme(language: string) {
+    this.randomSelection = new FamousComponent().GetFamousPerson();
     if(language === "english") {
       this.quote = this.english.getEnglishQuote();
-      console.log(this.quote);
     }
     else if(language === "japanese") {
       this.quote = this.quoteService.getJapaneseQuote();
@@ -36,8 +37,9 @@ export class AppComponent implements OnInit {
     else if(language === "special") {
       this.quote = this.english.getEnglishQuote();
       let quoteArray = this.quote.split("");
-      quoteArray.splice(this.quote.length -1, 1, ' OF POOP.')
-      this.quote = quoteArray.join("");
+      this.titleNumber = Math.floor(Math.random() * 11);
+      quoteArray.splice(this.quote.length -1, 1, "")
+      this.quote = quoteArray.join("") + " of " + this.funnyTitles[this.titleNumber];
     }
     else if(language === "russian") {
       this.quote = this.quoteService.getRussianQuote();
@@ -53,11 +55,21 @@ export class AppComponent implements OnInit {
       console.log(english);
       this.quote = this.quoteService.getRandomQuote(english);
       console.log(this.quote);
+      let person = new FamousComponent().GetFamousPerson();
+      console.log(person);
+      let outputName = [];
+      let letter = this.famousRename.charAt(Math.floor(Math.random() * this.famousRename.length));
+      let personSplit = person.split(" ");
+      for(let i = 0; i < personSplit.length; i++){
+        let rename = personSplit[i].split("");
+        rename[0] = letter;
+        let renamed = rename.join("");
+        outputName.push(renamed);
+      }
+      this.randomSelection = outputName.join(" ");
     }
 
     this.randomNumber = Math.floor(Math.random() * 12000)+1;
-    // this.randomPersonNumber = Math.floor(Math.random() * 466);
-    this.randomSelection = new FamousComponent().GetFamousPerson();
     this.titleNumber = Math.floor(Math.random() * 11);
     this.title = this.funnyTitles[this.titleNumber];
 
