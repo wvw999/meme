@@ -30,12 +30,12 @@ body {
 .bottom {
     position: absolute;
     line-height: 28px;
-    top: 350px;
+    top: 420px;
     left: 4px;
 }
 
 .card {
-  width: 400px;
+  width: 470px;
   padding: 35px;
   margin: 0 auto; /* Added */
   float: none; /* Added */

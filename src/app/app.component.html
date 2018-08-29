@@ -7,14 +7,13 @@
 
   <div *ngIf="quote ===''">
     <div align="center" class="card bg-dark">
-      <img src="../assets/img/dr-evil.jpg" alt="Welcome to the Meme Generator!" align="center">
+      <img src="../assets/img/dr-evil.jpg" alt="Welcome to the Meme Generator!" align="center" width="400">
     </div>
   </div>
 
   <div *ngIf="quote !== ''">
     <div id="memeImage" class="card bg-dark text-white">
-
-      <img class="card-img" width="470px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
+      <img class="card-img" width="500px" src="https://memegenerator.net/img/images/400x400/{{randomNumber}}.jpg">
     <div class="card-img-overlay">
       <h1 class="card-title memeText top">{{quote}}</h1>
       <p class="card-text memeText bottom">—{{randomSelection}}</p>
