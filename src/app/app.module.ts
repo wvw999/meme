@@ -10,6 +10,7 @@ import { GreekComponent } from './greek/greek.component';
 import { TeluguComponent } from './telugu/telugu.component';
 import { RandomComponent } from './random/random.component';
 import { FamousComponent } from './famous/famous.component';
+import { EnglishComponent } from './english/english.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FamousComponent } from './famous/famous.component';
     GreekComponent,
     TeluguComponent,
     RandomComponent,
-    FamousComponent
+    FamousComponent,
+    EnglishComponent
   ],
   imports: [
     BrowserModule

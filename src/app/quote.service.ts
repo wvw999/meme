@@ -5,9 +5,11 @@ import { JapaneseComponent } from './japanese/japanese.component';
 import { RussianComponent } from './russian/russian.component';
 import { TeluguComponent } from './telugu/telugu.component';
 import { RandomComponent } from './random/random.component';
+import { EnglishComponent } from './english/english.component';
 
 @Injectable()
 export class QuoteService {
+  static quoteLibrary: string[] = [];
 
   constructor() { }
 
@@ -15,11 +17,6 @@ export class QuoteService {
 
     return QuoteGenerator.fetchQuote();
 
-  }
-
-  getFunnyQuote(quotePackage): string {
-
-    return quotePackage.quote;
   }
 
   getJapaneseQuote() {
