@@ -4,7 +4,8 @@ import { GreekComponent } from './greek/greek.component';
 import { JapaneseComponent } from './japanese/japanese.component';
 import { RussianComponent } from './russian/russian.component';
 import { TeluguComponent } from './telugu/telugu.component';
-import { ScreenshotComponent } from './screenshot/screenshot.component';
+import { RandomComponent } from './random/random.component';
+import { FamousComponent } from './famous/famous.component';
 
 @Component({
   selector: 'app-root',
@@ -24,19 +25,38 @@ export class AppComponent {
 
   constructor(private quoteService: QuoteService) {}
 
-  getMeme() {
-    this.quote = '';
-    let quotePromise = this.quoteService.getQuote();
-    quotePromise.then(quoteData => {
-      this.quote = this.quoteService.getFunnyQuote(quoteData);
-    }).catch(error => {
-      console.log(error);
-    })
+  getMeme(language: string) {
+    if(language === "english") {
+      this.quote = '';
+      let quotePromise = this.quoteService.getQuote();
+      quotePromise.then(quoteData => {
+        this.quote = this.quoteService.getFunnyQuote(quoteData);
+      }).catch(error => {
+        console.log(error);
+      })
+    }
+    else if(language === "japanese") {
+      this.quote = this.quoteService.getJapaneseQuote();
+    }
+    else if(language === "russian") {
+      this.quote = this.quoteService.getRussianQuote();
+    }
+    else if(language === "greek") {
+      this.quote = this.quoteService.getGreekQuote();
+    }
+    else if(language === "telugu") {
+      this.quote = this.quoteService.getTeluguQuote();
+    }
+    else if(language === "random") {
+      this.quote = this.quoteService.getRandomQuote();
+    }
+
     this.randomNumber = Math.floor(Math.random() * 12000)+1;
-    this.randomPersonNumber = Math.floor(Math.random() * 466);
-    this.randomSelection = this.famousPerson[this.randomPersonNumber];
+    // this.randomPersonNumber = Math.floor(Math.random() * 466);
+    this.randomSelection = new FamousComponent().GetFamousPerson();
     this.titleNumber = Math.floor(Math.random() * 11);
     this.title = this.funnyTitles[this.titleNumber];
+
   }
 
 }
