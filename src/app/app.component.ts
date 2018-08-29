@@ -4,6 +4,7 @@ import { GreekComponent } from './greek/greek.component';
 import { JapaneseComponent } from './japanese/japanese.component';
 import { RussianComponent } from './russian/russian.component';
 import { TeluguComponent } from './telugu/telugu.component';
+import { ScreenshotComponent } from './screenshot/screenshot.component';
 
 @Component({
   selector: 'app-root',
