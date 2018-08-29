@@ -11,7 +11,6 @@ export class FamousComponent implements OnInit {
   constructor() { }
 
   GetFamousPerson(){
-    console.log(this.famousPerson[this.randomPersonNumber]);
     return this.famousPerson[this.randomPersonNumber];
   }
 
