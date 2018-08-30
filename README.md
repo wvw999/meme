@@ -41,8 +41,8 @@ The `SpEcIaL` feature was initially a solution to fetched quotes that exceeded 1
 
 ## Links
 
-* [Github Repo] https://github.com/wvw999/meme
-* [Firebase] https://meme-afecf.firebaseapp.com/
+* [Github Repo](https://github.com/wvw999/meme)
+* [Firebase](https://meme-afecf.firebaseapp.com/)
 
 ## License
 
