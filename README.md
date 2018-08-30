@@ -1,6 +1,8 @@
 # Meme Generator
 
-#### Epicodus Javascript level 3 group Project
+## Epicodus Javascript level 3 group 
+
+#### Project August 30, 2018
 
 #### By Will Swanson, Matt Smith, Thad Donaghue, and Craig Wann
 
@@ -15,7 +17,7 @@ Spend any amount of time on the internet and you're quite likely to encounter [m
 
 ## Specifications
 
-Clicking the `Generate Meme` button on the default `English` setting will cycle through a variety of random images for display as well as overlaying a phrase and attribute that phrase to a notable speaker.  The Quotes are taken in in batches of 100.  Any quotes found to be longer than 100 characters are filtered out and the remainders are stored and used for subsequent clicks.
+Clicking the `Generate Meme` button on the default `English` setting will cycle through a variety of random images for display as well as overlaying a phrase and attribute that phrase to a notable speaker.  The Quotes are taken in in batches of 100.  Any quotes found to be longer than 100 characters are filtered out and the remainders are stored and used for subsequent clicks so as not to needlessly tax the quote API.
 
 The `Randomized English` applies an additional level of abstraction by randomly comparing nouns, verbs and adjectives in the fetched quote with arrays of similar types of words.  At that point, words are randomly replaced with different words of the same type.
 
@@ -31,7 +33,7 @@ As an added feature, the page title changes to a new silly phrase with every cli
 * Install Angular CLI 1.6.5.
 * Clone the project repo.
 * Run `npm install` from project directory.
-* Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Run `ng serve --open` for a dev server.  It should bring up the page automatically, but navigate to `http://localhost:4200/` if it does not. The app will automatically reload if you change any of the source files.
 
 ## Technologies Used
 
