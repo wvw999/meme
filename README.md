@@ -10,6 +10,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Spend any amount of time on the internet and you're quite likely to encounter [memes](https://en.wikipedia.org/wiki/Meme).  The four of us decided to take the established template of running text over an image and giving a user the option to randomize the results and see what entertaining results may happen.  **Please note that while we've taken steps to limit offensive content, this program draws from a number of random sources and the juxtaposed imagery, phrases and attributed speaker of said content may inadvertently yield offensive results**.
 
+![screen shot view](screen-shot.png)
+
 
 ## Specifications
 
@@ -20,6 +22,8 @@ The `Randomized English` applies an additional level of abstraction by randomly 
 `Japanese`, `Russian`, `Greek` and `Telugu` all present a phrase in the selected language.  Initially we had planned to pass the phrase through a translator API, but each service that we found was prohibitively expensive for our uses.
 
 The `SpEcIaL` feature was initially a solution to fetched quotes that exceeded 100 characters.  The phrase is parsed and truncated after the last full word and the remainder of the sentence is addended with a random ridiculous word or phrase.  We subsequently programmed more elegant ways to avoid text overflowing the background image, but we wanted to keep this functionality as an easter egg.
+
+As an added feature, the page title changes to a new silly phrase with every click.
 
 ## Setup Instructions
 
